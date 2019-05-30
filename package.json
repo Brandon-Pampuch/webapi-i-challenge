@@ -4,7 +4,7 @@
   "description": "Express Demo",
   "main": "index.js",
   "scripts": {
-    "start": "index.js",
+    "start": "node index.js",
     "server": "nodemon index.js"
   },
   "repository": {
