@@ -53,15 +53,17 @@ server.put('/api/users/:id', (req, res) => {
         }else{
             res.status(404).json({message:"nothing here"})
         }
-        res.status(204).end() // tells client it's done
     }).catch(err =>{
         res.status(500).json({message:"error updating user"})
     })
 });
 
 
-// watch for connections on port 5000
-server.listen(4000, () =>
-  console.log('Server running on http://localhost:5000')
-);
+
+const port = process.env.PORT || 4000
+
+console.log()
+server.listen(port, () => {
+  console.log(`\n*** Server Running on http://localhost:${port} ***\n`);
+});
 
